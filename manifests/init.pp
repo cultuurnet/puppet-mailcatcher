@@ -21,11 +21,10 @@ class mailcatcher (
 ) inherits ::mailcatcher::params {
 
   if $manage_repo {
-    class { '::mailcatcher::repo': }
+    contain ::mailcatcher::repo
   }
 
-  class { '::mailcatcher::install': } ->
-  class { '::mailcatcher::config': } ~>
-  class { '::mailcatcher::service': } ->
-  Class['::mailcatcher']
+  contain ::mailcatcher::install
+  contain ::mailcatcher::config
+  contain ::mailcatcher::service
 }

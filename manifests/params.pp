@@ -7,7 +7,7 @@ class mailcatcher::params {
   case $::operatingsystem {
     'Ubuntu': {
       $package_name = 'mailcatcher'
-      $manage_repo  = true
+      $manage_repo  = false
       $service_name = 'mailcatcher'
       $http_ip      = '0.0.0.0'
       $http_port    = '1080'

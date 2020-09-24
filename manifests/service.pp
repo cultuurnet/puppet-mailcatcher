@@ -5,10 +5,10 @@
 #
 class mailcatcher::service {
 
-  service { $::mailcatcher::service_name:
-    ensure     => running,
-    enable     => true,
+  service { $mailcatcher::service_name:
+    ensure     => $mailcatcher::service_ensure,
+    enable     => $mailcatcher::service_enable,
     hasstatus  => true,
-    hasrestart => true,
+    hasrestart => true
   }
 }

@@ -4,7 +4,7 @@ class mailcatcher::repo {
 
   apt::source { 'cultuurnet-tools':
     location => 'http://apt.uitdatabank.be/tools-production',
-    release  => 'trusty',
+    release  => $facts['lsbdistcodename'],
     repos    => 'main',
     key      => {
       'id'     => '2380EA3E50D3776DFC1B03359F4935C80DC9EA95',

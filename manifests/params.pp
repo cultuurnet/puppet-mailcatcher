@@ -21,6 +21,7 @@ class mailcatcher::params {
         default: {
           fail("Ubuntu ${::operatingsystemrelease} not supported")
         }
+      }
     }
     default: {
       fail("${::operatingsystem} not supported")

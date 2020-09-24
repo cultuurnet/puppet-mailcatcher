@@ -14,9 +14,9 @@ class mailcatcher::params {
           $service_ensure = 'running'
           $service_enable = true
           $http_ip        = '0.0.0.0'
-          $http_port      = '1080'
+          $http_port      = 1080
           $smtp_ip        = '127.0.0.1'
-          $smtp_port      = '1025'
+          $smtp_port      = 1025
         }
         default: {
           fail("Ubuntu ${::operatingsystemrelease} not supported")

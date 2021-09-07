@@ -5,7 +5,7 @@
 class mailcatcher::install {
 
   package { $::mailcatcher::package_name:
-    ensure => present
+    ensure => $::mailcatcher::package_version
   }
 
 }

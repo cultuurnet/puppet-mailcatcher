@@ -11,15 +11,16 @@
 #   e.g. "Specify one or more upstream ntp servers as an array."
 #
 class mailcatcher (
-  String                     $package_name   = $mailcatcher::params::package_name,
-  Boolean                    $manage_repo    = $mailcatcher::params::manage_repo,
-  String                     $service_name   = $mailcatcher::params::service_name,
-  Boolean                    $service_enable = $mailcatcher::params::service_enable,
-  Enum['running', 'stopped'] $service_ensure = $mailcatcher::params::service_ensure,
-  Stdlib::Ipv4               $http_ip        = $mailcatcher::params::http_ip,
-  Integer                    $http_port      = $mailcatcher::params::http_port,
-  Stdlib::Ipv4               $smtp_ip        = $mailcatcher::params::smtp_ip,
-  Integer                    $smtp_port      = $mailcatcher::params::smtp_port
+  String                     $package_name    = $mailcatcher::params::package_name,
+  String                     $package_version = $mailcatcher::params::package_version,
+  Boolean                    $manage_repo     = $mailcatcher::params::manage_repo,
+  String                     $service_name    = $mailcatcher::params::service_name,
+  Boolean                    $service_enable  = $mailcatcher::params::service_enable,
+  Enum['running', 'stopped'] $service_ensure  = $mailcatcher::params::service_ensure,
+  Stdlib::Ipv4               $http_ip         = $mailcatcher::params::http_ip,
+  Integer                    $http_port       = $mailcatcher::params::http_port,
+  Stdlib::Ipv4               $smtp_ip         = $mailcatcher::params::smtp_ip,
+  Integer                    $smtp_port       = $mailcatcher::params::smtp_port
 ) inherits mailcatcher::params {
 
   if $manage_repo {

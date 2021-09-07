@@ -34,4 +34,5 @@ class mailcatcher (
   contain mailcatcher::service
 
   Class['mailcatcher::install'] -> Class['mailcatcher::config'] ~> Class['mailcatcher::service']
+  Class['mailcatcher::install'] ~> Class['mailcatcher::service']
 }
